@@ -1,2 +1,3 @@
-# xaod_large_container
-Demonstration of creating large xAOD containers efficiently
+# xAOD Large Container Creation
+
+Demonstration of creating large xAOD containers efficiently.

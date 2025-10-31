@@ -1,3 +1,6 @@
+# Copyright (C) 2002-2025 CERN for the benefit of the ATLAS collaboration
+
+# CMake files.
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
@@ -11,9 +14,9 @@ CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
 
-# CLion
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#cmake-build-*
+# VSCode files.
+build/
+
+# Athena files.
+eventLoopHeartBeat.txt
+*.tar.gz
