@@ -25,6 +25,10 @@ acc.merge(PerfMonMTSvcCfg(flags))
 acc.addEventAlgo(CompFactory.xAODMaker.PixelClusterMakerSimpleAlg('SimpleAlg'))
 acc.addEventAlgo(CompFactory.xAODMaker.PixelClusterMakerFastAlg('FastAlg'))
 acc.addEventAlgo(CompFactory.xAODMaker.PixelClusterMakerUltimateAlg('UltimateAlg'))
+for name in ['Simple', 'Fast', 'Ultimate']:
+   acc.addEventAlgo(CompFactory.xAODMaker.PixelClusterValidatorAlg(f'{name}Validator',
+                                                                   Input=f'{name}PixelClusters'))
+   pass
 
 # Run the job.
 acc.run()
