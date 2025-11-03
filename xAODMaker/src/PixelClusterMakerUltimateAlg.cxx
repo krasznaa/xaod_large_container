@@ -40,9 +40,9 @@ PixelClusterMakerUltimateAlg::execute(const EventContext &ctx) const {
     auto store = std::make_unique<xAOD::PixelClusterAuxContainer>();
 
     // Fill the interface container with clusters, making use of the data pool.
-    for (unsigned int i = 0; i < m_elements; ++i) {
-        container->push_back(interfaceItems.nextElementPtr());
-    }
+    container->push_new(m_elements, [&interfaceItems]() {
+        return interfaceItems.nextElementPtr();
+    });
 
     // Set the auxiliary container to the correct size, and connect it to the
     // interface container.
