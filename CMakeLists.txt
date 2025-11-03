@@ -10,6 +10,11 @@ find_package(Athena REQUIRED)
 # Set up CTest.
 atlas_ctest_setup()
 
+# Re-check all of the wildcarded expressions on every re-build in this
+# project.
+set(ATLAS_ALWAYS_CHECK_WILDCARDS TRUE CACHE BOOL
+   "(Re-)Check wildcards in file specifications on every build")
+
 # Set up the ATLAS project.
 atlas_project(USE Athena ${Athena_VERSION})
 

@@ -23,6 +23,7 @@ acc.merge(PerfMonMTSvcCfg(flags))
 
 # Add the test algorithm(s) to the job.
 acc.addEventAlgo(CompFactory.xAODMaker.PixelClusterMakerSimpleAlg('SimpleAlg'))
+acc.addEventAlgo(CompFactory.xAODMaker.PixelClusterMakerFastAlg('FastAlg'))
 
 # Run the job.
 acc.run()
