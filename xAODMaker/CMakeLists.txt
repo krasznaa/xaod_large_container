@@ -6,7 +6,8 @@ atlas_subdir(xAODMaker)
 # Component(s) in the package.
 atlas_add_component(xAODMaker
    src/*.h src/*.cxx
-   LINK_LIBRARIES GaudiKernel AthenaBaseComps StoreGateLib xAODInDetMeasurement)
+   LINK_LIBRARIES GaudiKernel AthenaBaseComps AthAllocators StoreGateLib
+                  xAODInDetMeasurement)
 
 # Install files from the package.
 atlas_install_python_modules(python/*.py)
